@@ -25,9 +25,9 @@ export PATH=$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:/usr/local/bin:/usr/l
 export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
 
 # Include alias file (if present) containing aliases for ssh, etc.
-if [ -f .aliases ]
+if [ -f $ZDOTDIR/.aliases ]
 then
-  source .aliases
+  source $ZDOTDIR/.aliases
 fi
 
 # Set architecture-specific brew share path.

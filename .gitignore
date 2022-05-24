@@ -16,3 +16,6 @@ db/*.sqlite3
 log/*.log
 rerun.txt
 tmp/**/*
+.zsh_sessions/**/*
+.zcompdump
+.zsh_history
