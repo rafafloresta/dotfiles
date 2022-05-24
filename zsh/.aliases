@@ -2,12 +2,13 @@
 alias cdc="cd ~/code"
 alias pro="cd ~/code/procore"
 alias dotfiles="subl ~/code/dotfiles"
+alias config="subl ~/code/mac-dev-playbook/"
+alias run_config="cd ~/code/mac-dev-playbook/;./run"
 
 #git
 alias gs='git status'
 alias gc='git commit'
-alias gc='git commit'
-alias gcob='git commit'
+alias gcob='git checkout -b'
 alias gp='git pull --rebase'
 alias gcam='git commit -am'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'

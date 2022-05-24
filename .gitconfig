@@ -1,10 +1,22 @@
+# This is Git's per-user configuration file.
 [user]
-  name = Jeff Geerling
-  email = geerlingguy@mac.com
+name = Rafael Floresta
+email = rafael.floresta@procore.com
 [core]
-  editor = vi
-  excludesfile = ~/.gitignore
+  editor = subl
+  excludesfile = ~/code/dotfiles/.gitignore
   autocrlf = input
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+[mergetool "sourcetree"]
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
 [color]
   branch = auto
   diff = auto
@@ -20,8 +32,6 @@
   default = simple
 [merge]
   tool = kdiff3
-[difftool]
-  prompt = false
 [alias]
   c = commit
   co = checkout
@@ -33,3 +43,4 @@
   l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
 [pull]
 	rebase = true
+

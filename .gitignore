@@ -17,5 +17,6 @@ log/*.log
 rerun.txt
 tmp/**/*
 .zsh_sessions/**/*
+zsh/.zsh_sessions/**/*
 .zcompdump
 .zsh_history
