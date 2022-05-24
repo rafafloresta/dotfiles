@@ -24,6 +24,7 @@
   prompt = false
 [alias]
   c = commit
+  co = checkout
   ca = commit -a
   cm = commit -m
   cam = commit -am
