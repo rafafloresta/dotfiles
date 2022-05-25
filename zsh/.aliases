@@ -1,9 +1,8 @@
 #directories
 alias cdc="cd ~/code"
 alias pro="cd ~/code/procore"
-alias dotfiles="subl ~/code/dotfiles"
-alias config="subl ~/code/mac-dev-playbook/"
-alias run_config="cd ~/code/mac-dev-playbook/;./run"
+alias dotf="cd ~/code/dotfiles"
+alias config="cd ~/code/mac-dev-playbook"
 
 #git
 alias gs='git status'
@@ -15,17 +14,19 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gd='git diff'
 
 # Unix
-alias ll="ls -al"
+alias ls="exa -al"
 alias ln="ln -v"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
+alias reload='source $ZDOTDIR/.zshrc'
 
 # Bundler
 alias b="bundle"
+alias be="bundle exec"
 
 # Rails
-# alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+# alias migrate="be rake db:migrate"
 alias s="rspec"
 
 # Pretty print the path
