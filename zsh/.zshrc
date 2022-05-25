@@ -12,11 +12,25 @@ export CLICOLOR_FORCE=1
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
 
-# Nicer prompt.
-export PS1=$'\n'"%F{green} %*%F %3~ %F{white}"$'\n'"$ "
-
 # Enable plugins.
 plugins=(git brew history kubectl history-substring-search)
+
+### Show git branch on the PROMPT
+
+# <Load version control information>
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '[%b]'
+ 
+# Let the prompt have substitutions, so we can interpolate the vcs_info_msg_0 variable
+setopt PROMPT_SUBST
+
+### </Show git branch on the PROMPT>
+
+# Nicer prompt.
+export PS1=$'\n'"%F{green} %*%F %3~ %F{white}"'${vcs_info_msg_0_}'$'\n'" $ "
 
 # Custom $PATH with extra locations.
 export PATH=$(pyenv root)/shims:$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/usr/local/git/bin:$HOME/.composer/vendor/bin:$PATH
