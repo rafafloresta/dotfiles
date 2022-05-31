@@ -1,8 +1,8 @@
 #directories
-alias cdc="cd ~/code"
+alias cdw="cd ~/code"
 alias pro="cd ~/code/procore"
-alias dotf="cd ~/code/dotfiles"
-alias config="cd ~/code/mac-dev-playbook"
+alias dotf="cd ~/code/dotfiles; subl ."
+alias config="cd ~/code/mac-dev-playbook; subl ."
 
 #git
 alias gs='git status'
