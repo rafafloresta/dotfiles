@@ -3,6 +3,7 @@ alias cdw="cd ~/code"
 alias pro="cd ~/code/procore"
 alias pro2="cd ~/code/2procore"
 alias dotf="cd ~/code/dotfiles; subl ."
+alias dcup="cd ~/code/compose; docker-compose up -d; cd -"
 alias config="cd ~/code/mac-dev-playbook; subl ."
 
 #git
